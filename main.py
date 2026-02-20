@@ -1,14 +1,15 @@
 import random
 try:
-    with open("pref.txt", "r") as con:
+    with open("pref.txt", "r+") as con:
         defult = con.read()
-        defult = int(defult)
+        
 
 except FileNotFoundError:
     with open("pref.txt", "w") as con:
         con.write("7")
         defult = 7
 
+defult = int(defult)
 
 
 def main(gange_tilbage=defult):

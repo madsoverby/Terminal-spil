@@ -2,13 +2,14 @@ import random
 try:
     with open("pref.txt", "r") as con:
         defult = con.read()
-except:
+        defult = int(defult)
+
+except FileNotFoundError:
     with open("pref.txt", "w") as con:
         con.write("7")
         defult = 7
 
 
-defult = int(defult)
 
 def main(gange_tilbage=defult):
     print("gæt et tal fra 1 til 100")
@@ -25,15 +26,15 @@ def main(gange_tilbage=defult):
         if ins == tal:
             print(f"du  klarde det du gættede nemelig {tal}")
             break
-        if gange_tilbage == 1:
+        elif gange_tilbage == 1:
             print(f"du havde ikke flere gange tilbage tallet var {tal}")
             break
-        if ins < tal:
+        elif ins < tal:
             print(f"du gættede {ins} men du skal lige lidt højre")
-        if ins > tal:
+        else:
             print(f"du gættede {ins} men du skal lige lidt lavere")
 
-        gange_tilbage = gange_tilbage - 1
+        gange_tilbage -= 1
 
 print("hvis du ikke skriver noget går den til spil automatisk med 7 førsøg vis du vil ændre så gå ind i indstillinger")
 print("Indstillinger")

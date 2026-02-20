@@ -2,4 +2,4 @@
 Bare et lille hygge ting så jeg kan øve mig i de forskælige ting 😄
 
 ## OBS ‼️ ##
-Den laver en pref.txt fil vis du ikke har en men vis du har noget i en fil der hedder det så flyt den til et andet sted
+Spillet laver en fil der hedder `overby-spil-pref.txt`, så hvis du har noget der hedder det, ryk det

@@ -15,8 +15,8 @@ defult = int(defult)
 #Det her er main funtionen af spillet
 
 def main(gange_tilbage=defult):
-    print("gæt et tal fra 1 til 100")
-    print("lidt lige som tanken brænder jeg siger om det er højere eller laver")
+    print("Gæt et tal fra 1 til 100")
+    print("Lidt lige som tampen brænder jeg siger om det er højere eller lavere")
 
     tal = random.randint(1, 100)
 
@@ -33,7 +33,7 @@ def main(gange_tilbage=defult):
             print(f"du havde ikke flere gange tilbage tallet var {tal}")
             break
         elif ins < tal:
-            print(f"du gættede {ins} men du skal lige lidt højre")
+            print(f"du gættede {ins} men du skal lige lidt højere")
         else:
             print(f"du gættede {ins} men du skal lige lidt lavere")
 
@@ -41,7 +41,7 @@ def main(gange_tilbage=defult):
 
 #hovedmenuen
 
-print("hvis du ikke skriver noget går den til spil automatisk med 7 førsøg vis du vil ændre så gå ind i indstillinger")
+print("Hvis du ikke skriver noget går den til spil automatisk med 7 førsøg hvis du vil ændre så gå ind i Indstillinger")
 print("Indstillinger")
 print("Spil")
 

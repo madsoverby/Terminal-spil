@@ -1,11 +1,11 @@
 import random
 try:
-    with open("pref.txt", "r+") as con:
+    with open("overby-spil-pref.txt", "r+") as con:
         defult = con.read()
         
 
 except FileNotFoundError:
-    with open("pref.txt", "w") as con:
+    with open("overby-spil-pref.txt", "w") as con:
         con.write("7")
         defult = 7
 
@@ -45,7 +45,7 @@ ins = input("Skriv her --> ")
 
 if ins == "Indstillinger":
     inputs = input("hvor mange gange skal du have hver gang --> ") 
-    with open("pref.txt", "w") as con:
+    with open("overby-spil-pref.txt", "w") as con:
         con.write(inputs)
     main(int(inputs))
         

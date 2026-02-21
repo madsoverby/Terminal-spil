@@ -12,6 +12,8 @@ except FileNotFoundError:
 defult = int(defult)
 
 
+#Det her er main funtionen af spillet
+
 def main(gange_tilbage=defult):
     print("gæt et tal fra 1 til 100")
     print("lidt lige som tanken brænder jeg siger om det er højere eller laver")
@@ -36,6 +38,8 @@ def main(gange_tilbage=defult):
             print(f"du gættede {ins} men du skal lige lidt lavere")
 
         gange_tilbage -= 1
+
+#hovedmenuen
 
 print("hvis du ikke skriver noget går den til spil automatisk med 7 førsøg vis du vil ændre så gå ind i indstillinger")
 print("Indstillinger")

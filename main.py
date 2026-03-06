@@ -12,7 +12,7 @@ except FileNotFoundError:
 defult = int(defult)
 
 
-#Det her er main funtionen af spillet
+
 
 def main(gange_tilbage=defult):
     print("Gæt et tal fra 1 til 100")
@@ -39,7 +39,7 @@ def main(gange_tilbage=defult):
 
         gange_tilbage -= 1
 
-#hovedmenuen
+
 
 print("Hvis du ikke skriver noget går den til spil automatisk med 7 førsøg hvis du vil ændre så gå ind i Indstillinger")
 print("Indstillinger")

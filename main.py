@@ -1,11 +1,11 @@
 import random
 try:
-    with open("overby-spil-pref.txt", "r+") as con:
+    with open("game-pref.txt", "r+") as con:
         defult = con.read()
         
 
 except FileNotFoundError:
-    with open("overby-spil-pref.txt", "w") as con:
+    with open("game-pref.txt", "w") as con:
         con.write("7")
         defult = 7
 
@@ -14,42 +14,41 @@ defult = int(defult)
 
 
 
-def main(gange_tilbage=defult):
-    print("Gæt et tal fra 1 til 100")
-    print("Lidt lige som tampen brænder jeg siger om det er højere eller lavere")
+def main(times_left=defult):
+    print("Guess a number from 1 to 100")
 
     tal = random.randint(1, 100)
 
     while True:
         try:
-            ins = int(input("du skal bare skrive dit tal lige her --> "))    
+            ins = int(input("Type Your answer here --> "))    
         except ValueError:
-            print("Du må kun skrive tal")
+            print("Your only allowed to type numbers")
             continue
         if ins == tal:
-            print(f"du  klarde det du gættede nemelig {tal}")
+            print(f"Nice you guessed the right number {tal} with {times_left} trys left")
             break
-        elif gange_tilbage == 1:
-            print(f"du havde ikke flere gange tilbage tallet var {tal}")
+        elif times_left == 1:
+            print(f"Sorry you don't have any more guesses, heres the number {tal}")
             break
         elif ins < tal:
-            print(f"du gættede {ins} men du skal lige lidt højere")
+            print(f"you guessed {ins} but you need to go a little higher")
         else:
-            print(f"du gættede {ins} men du skal lige lidt lavere")
+            print(f"you guessed {ins} but you have to go a little lower")
 
-        gange_tilbage -= 1
+        times_left -= 1
 
 
 
-print("Hvis du ikke skriver noget går den til spil automatisk med 7 førsøg hvis du vil ændre så gå ind i Indstillinger")
-print("Indstillinger")
-print("Spil")
+print("If you don't enter anything, the game will start automatically with 7 attempts. If you want to change this, go to Settings.")
+print("Settings")
+print("Game")
 
-ins = input("Skriv her --> ")
+ins = input("Type here --> ")
 
-if ins == "Indstillinger":
-    inputs = input("hvor mange gange skal du have hver gang --> ") 
-    with open("overby-spil-pref.txt", "w") as con:
+if ins == "Settings":
+    inputs = input("how many guesses do you want --> ") 
+    with open("game-pref.txt", "w") as con:
         con.write(inputs)
     main(int(inputs))
         
